@@ -62,4 +62,25 @@ router.put("/workouts/:id", (req, res) => {
       res.status(400).json(err);
     });
 });
+
+// Get route to for /api/workouts in a range (for last seven days)
+router.get("/workouts/range", (req, res) => {
+  Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: { $sum: "$exercises.duration" },
+      },
+    },
+    {
+      $sort: { day: 1 },
+    },
+  ])
+    .then((data) => {
+      res.json(data.slice(data.length - 7));
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
+
 module.exports = router;
