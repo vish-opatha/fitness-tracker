@@ -53,6 +53,8 @@ node server.js
 
 After the above step go to the browser and access the application using localhost:3000
 
+---
+
 There are data that you could seed into the database if you prefer. For that, you could run the following command.
 
 ```
