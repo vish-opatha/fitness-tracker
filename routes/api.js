@@ -32,4 +32,34 @@ router.post("/workouts", (req, res) => {
     });
 });
 
+// Update route for a given workout
+router.put("/workouts/:id", (req, res) => {
+  Workout.findOneAndUpdate(
+    { _id: req.params.id },
+    {
+      $push: {
+        exercises: [
+          {
+            type: req.body.type,
+            name: req.body.name,
+            weight: req.body.weight,
+            sets: req.body.sets,
+            reps: req.body.reps,
+            duration: req.body.duration,
+            distance: req.body.distance,
+          },
+        ],
+      },
+    },
+    {
+      new: true,
+    }
+  )
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
 module.exports = router;
