@@ -51,7 +51,7 @@ You can run the project by cloning this project to your local machine. You need 
 node server.js
 ```
 
-After the above step go to the browser and access the application using localhost:3000
+After the above step, go to the browser and access the application using localhost:3000
 
 ---
 
@@ -74,5 +74,3 @@ Any user can contribute this project by raising an issue in the github repositor
 ## Questions
 
 If you have any questions about the repo, open an issue or directly contact me at <v.opatha@gmail.com> You can find my other work at [Github](https://github.com/vish-op)
-
-[Heroku deployment](https://glacial-basin-20895.herokuapp.com/)
