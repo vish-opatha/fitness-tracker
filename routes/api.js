@@ -13,8 +13,19 @@ router.get("/workouts", (req, res) => {
       $sort: { day: 1 },
     },
   ])
-    .then((dbWorkout) => {
-      res.json(dbWorkout.slice(dbWorkout.length - 7));
+    .then((data) => {
+      res.json(data.slice(data.length - 7));
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
+
+// Post route for /api/workouts
+router.post("/workouts", (req, res) => {
+  Workout.create({})
+    .then((data) => {
+      res.json(data);
     })
     .catch((err) => {
       res.status(400).json(err);
