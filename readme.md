@@ -22,7 +22,7 @@ This application is built using several technologies and tools. As languages **H
 
 Following are the important links related to this application.
 
-- [Fitness Tracker - Heroku Deployment](https://protected-cove-00337.herokuapp.com/?id=6173375f7a386827d4559942)
+- [Fitness Tracker - Heroku Deployment](https://protected-cove-00337.herokuapp.com/)
 - [Fitness Tracker - Github Repo](https://github.com/vish-opatha/fitness-tracker)
 
 ## Mockup
